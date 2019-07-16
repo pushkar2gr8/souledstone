@@ -3,13 +3,19 @@ import { colors } from "./colors";
 
 export const commonStyles = StyleSheet.create({
   mainContainer: {
-    flex: 1
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
   },
   catagoryButton: {
-    flex: 1,
+    width: "100%",
+    height: "50%",
     backgroundColor: "rgba(0, 0, 0, 0.6)",
     justifyContent: "center",
-    alignItems: "flex-start"
+    alignItems: "flex-start",
+    padding: 10,
+    margin: 5,
+    borderRadius: 8
   },
   catagoryText: {
     fontSize: 16,

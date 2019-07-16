@@ -8,20 +8,23 @@ class HomeScreen extends Component {
     super(props);
   }
 
-  renderButton = (text, ImageType) => {
-    return (
-      <TouchableOpacity style={commonStyles.catagoryButton}>
-        <ImageType />
-        <Text style={commonStyles.catagoryText}>{text}</Text>
-      </TouchableOpacity>
-    );
-  };
-
   render() {
     return (
       <SafeAreaView style={commonStyles.mainContainer}>
-        {this.renderButton("Shirts", <Image source={images.headerLeft} />)}
-        {this.renderButton("Pants", <Image source={images.headerLeft} />)}
+        <TouchableOpacity
+          style={commonStyles.catagoryButton}
+          onPress={() => this.props.navigation.navigate("list")}
+        >
+          {/* <ImageType /> */}
+          <Text style={commonStyles.catagoryText}>{"Shirts"}</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          style={commonStyles.catagoryButton}
+          onPress={() => this.props.navigation.navigate("list")}
+        >
+          {/* <ImageType /> */}
+          <Text style={commonStyles.catagoryText}>{"pants"}</Text>
+        </TouchableOpacity>
       </SafeAreaView>
     );
   }
